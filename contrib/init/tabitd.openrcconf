@@ -1,0 +1,33 @@
+# /etc/conf.d/tabitd: config file for /etc/init.d/tabitd
+
+# Config file location
+#TABITD_CONFIGFILE="/etc/tabit/tabit.conf"
+
+# What directory to write pidfile to?  (created and owned by $TABITD_USER)
+#TABITD_PIDDIR="/var/run/tabitd"
+
+# What filename to give the pidfile
+#TABITD_PIDFILE="${TABITD_PIDDIR}/tabitd.pid"
+
+# Where to write tabitd data (be mindful that the blockchain is large)
+#TABITD_DATADIR="/var/lib/tabitd"
+
+# User and group to own tabitd process
+#TABITD_USER="tabit"
+#TABITD_GROUP="tabit"
+
+# Path to tabitd executable
+#TABITD_BIN="/usr/bin/tabitd"
+
+# Nice value to run tabitd under
+#TABITD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+TABITD_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for tabitd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+TABITD_SIGTERM_TIMEOUT=60

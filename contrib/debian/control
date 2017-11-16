@@ -1,0 +1,67 @@
+Source: tabit
+Section: utils
+Priority: optional
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Uploaders: Micah Anderson <micah@debian.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libboost-system-dev (>> 1.35) | libboost-system1.35-dev,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libminiupnpc8-dev | libminiupnpc-dev (>> 1.6),
+ libboost-filesystem-dev (>> 1.35) | libboost-filesystem1.35-dev,
+ libboost-program-options-dev (>> 1.35) | libboost-program-options1.35-dev,
+ libboost-thread-dev (>> 1.35) | libboost-thread1.35-dev,
+ libboost-test-dev (>> 1.35) | libboost-test1.35-dev,
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://tabitcore.org/
+Vcs-Git: git://github.com/tabit/tabit.git
+Vcs-Browser: https://github.com/tabit/tabit
+
+Package: tabitd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Tabit is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Tabit uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Tabit Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, tabitd, and the CLI tool
+ tabit-cli to interact with the daemon.
+
+Package: tabit-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Tabit is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Tabit uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Tabit Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Tabit-Qt, a GUI for Tabit based on Qt.
+
+Package: tabit-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Tabit is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Tabit uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Tabit Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides tabit-tx, a command-line transaction creation
+ tool which can be used without a tabit daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.

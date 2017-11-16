@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Tabit
+Comment=Tabit P2P Cryptocurrency
+Comment[fr]=Tabit, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Tabit, eşten eşe kriptografik sanal para birimi
+Exec=tabit-qt %u
+Terminal=false
+Type=Application
+Icon=tabit128
+MimeType=x-scheme-handler/tabit;
+Categories=Office;Finance;

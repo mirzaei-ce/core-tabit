@@ -1,0 +1,6 @@
+usr/local/bin/tabit-qt usr/bin
+share/pixmaps/tabit32.xpm usr/share/pixmaps
+share/pixmaps/tabit16.xpm usr/share/pixmaps
+share/pixmaps/tabit128.png usr/share/pixmaps
+debian/tabit-qt.desktop usr/share/applications
+debian/tabit-qt.protocol usr/share/kde4/services/

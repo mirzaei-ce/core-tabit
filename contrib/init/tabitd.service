@@ -1,0 +1,22 @@
+[Unit]
+Description=Tabit's distributed currency daemon
+After=network.target
+
+[Service]
+User=tabit
+Group=tabit
+
+Type=forking
+PIDFile=/var/lib/tabitd/tabitd.pid
+ExecStart=/usr/bin/tabitd -daemon -pid=/var/lib/tabitd/tabitd.pid \
+-conf=/etc/tabit/tabit.conf -datadir=/var/lib/tabitd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
